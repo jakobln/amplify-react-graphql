@@ -17,6 +17,7 @@ import {
   createNote as createNoteMutation,
   deleteNote as deleteNoteMutation,
 } from "./graphql/mutations";
+import { NewHomes } from './ui-components'
 
 const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
@@ -70,6 +71,9 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
+      <div>
+        <NewHomes />
+      </div>
       <Heading level={1}>My Notes App</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center">
